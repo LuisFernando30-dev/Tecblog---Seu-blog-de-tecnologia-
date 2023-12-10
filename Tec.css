@@ -1,0 +1,31 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    background-color: #fbc4ab;
+}
+main{
+    width: 1200px;
+    margin:0 auto;
+    display: flex;
+
+}
+header h1{
+    background-image: url(https://th.bing.com/th?id=OIP.bYifDrY2L9H3dM2wvD7_BAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+    font-size: 5rem;
+    font-weight: 900;
+    padding-top:5rem;
+    margin:0 auto;
+    text-align: center;
+    margin:20px;
+}
+@media screen (min-width: 1024px){
+    min-width: 1024px;
+    
+}
+
+
