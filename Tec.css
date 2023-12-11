@@ -1,3 +1,7 @@
+*{
+    margin:0;
+    padding:0;
+}
 body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
@@ -5,10 +9,49 @@ body{
     background-color: #fbc4ab;
 }
 main{
-    width: 1200px;
+    width:100%;
     margin:0 auto;
     display: flex;
+    flex-wrap: wrap;
 
+}
+nav ul{
+    margin:0;
+    padding:0;
+    background-color: black;
+    width:100%;
+    height:50px;
+}
+nav ul li{
+
+   list-style: none;
+    display:inline;
+    padding:20px;
+    width:100%;
+}
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    padding: 15px 20px;
+    position: relative;
+
+}
+nav ul li a:after{
+    background: none repeat scroll 0 0 transparent;
+    bottom:0;
+    content:"";
+    display:block;
+    height:2px;
+    left:50%;
+    position:absolute;
+    background:#fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width:0;
+
+}
+a:hover:after{
+    width: 100%;
+    left:0;
 }
 header h1{
     background-image: url(https://th.bing.com/th?id=OIP.bYifDrY2L9H3dM2wvD7_BAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
