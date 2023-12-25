@@ -5,8 +5,10 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
-    overflow-x: hidden;
+    margin:0 auto;
+    padding:0;
     background-color: #fbc4ab;
+    width:100%;
 }
 main{
     content: none;    
@@ -14,10 +16,25 @@ main{
     margin:0 auto;
 
 }
+.logo{
+    background:linear-gradient(to right, rgba(0, 168, 253),#fff 35%, #e00a95);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+    float:left;
+    display: flex;
+    justify-items: center;
+    
+.logo:active{
+    scale:0.92;
+}
+}
 nav ul{
     margin:0;
     padding:0;
     background-color: black;
+    text-align:center;
     width:100%;
     height:50px;
 }
@@ -27,7 +44,6 @@ nav ul li{
     display:inline;
     padding:20px;
     width:100%;
-    text-align: center;
 }
 nav ul li a{
     text-decoration: none;
@@ -54,11 +70,6 @@ a:hover:after{
     left:0;
 }
 header h1{
-    background-image: url(https://th.bing.com/th?id=OIP.bYifDrY2L9H3dM2wvD7_BAHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
-    background-size: cover;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color:transparent;
     font-size: 5rem;
     font-weight: 900;
     padding-top:5rem;
@@ -66,20 +77,54 @@ header h1{
     margin:0 auto;
     text-align: center;
     margin:20px;
+
+    background:linear-gradient(to right, rgba(0, 168, 253),#fff 35%, #e00a95);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 3s linear infinite;
+    box-shadow: 0 0 60px;
+}
+
+@keyframes gradient {
+    0%{background-position: 0% 75%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 70%;}
+}
+header, .btn-acesso{
+    clear: both;
+    text-align: center;
+    margin:4px;
 }
 .btn-acesso{
     background-color: black;
     color:white;
     width: 300px;
     height: 40px;
-    margin: 0 auto;
     padding:10px;
     border-radius: 40px;
-    text-align: center;
 }
 .btn-acesso:hover{
     cursor:pointer;
     background-color:rgb(22, 22, 22);
+}
+aside{
+    float:right;
+    width:20em;
+    height:100%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    padding:5px;
+    background-color: white;
+}
+aside .cp-formulario{
+    width:200px;
+    height:35px;
+    background-color:transparent;
+    padding: 10px;
+    margin:10px;
+    border-radius: 20px;
 }
 .function-p{
     margin:10px;
@@ -90,8 +135,17 @@ article{
     margin:0 auto;
     width: 90%;
     display:flex;
-    grid-template-columns: auto;
+    flex-wrap: wrap;
 }
 .titulo-arquivo{
     padding: 15px;
 }
+@media (max-width:400px){
+    aside{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        float:none;
+        border-radius: 20px;
+    }
+} 
